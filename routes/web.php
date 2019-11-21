@@ -2,7 +2,8 @@
 
 // Route::redirect('/', '/login');
 
-Route::get('/', 'HomeController@onDutyToday');
+Route::get('/', 'HomeController@onToday');
+Route::get('/all', 'HomeController@onAll')->name('jadwal.all');
 
 Route::get('/home', function () {
     if (session('status')) {

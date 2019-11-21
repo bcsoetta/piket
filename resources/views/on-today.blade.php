@@ -1,6 +1,6 @@
 @extends('layouts.front')
 @section('content')
-            <h1 class="display-5 text-center">Hari Ini : <br> {{date('m-d-Y')}}</h1>
+            <h1 class="display-5 text-center">Hari Ini</h1>
             <div class="table-responsive-sm">    
                 <table class="table mt-1">
                     <thead>
@@ -27,8 +27,4 @@
                     </tbody>
                 </table>
             </div>
-@endsection
-@section('scripts')
-@parent
-
 @endsection
