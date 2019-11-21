@@ -7,7 +7,7 @@
 
     <div class="card-body">
         <table class=" table table-bordered table-striped table-hover ajaxTable datatable datatable-Jadwal">
-            <thead>
+            <thead class="thead-dark">
                 <tr>
                     <th width="10">
 

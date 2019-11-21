@@ -3,7 +3,7 @@
             <h1 class="display-5 text-center">Hari Ini</h1>
             <div class="table-responsive-sm">    
                 <table class="table mt-1">
-                    <thead>
+                    <thead class="thead-dark">
                         <tr>
                         <th scope="col">#</th>
                         <th scope="col">Nama</th>
