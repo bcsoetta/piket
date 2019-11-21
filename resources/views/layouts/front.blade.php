@@ -28,16 +28,29 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" href="#">Jadwal</a>
+  <a class="navbar-brand" href="/">Jadwal Piket</a>
 
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
         <a class="nav-link" href="/">Today<span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/all">All<span class="sr-only">(current)</span></a>
       </li>
+      @guest
+      <li class="nav-item">
+        <a class="nav-link" href="/login">Login<span class="sr-only">(current)</span></a>
+      </li>
+      @endguest
+      @auth
+      <li class="nav-item">
+          <a href="#" class="nav-link" onclick="event.preventDefault(); document.getElementById('logoutform').submit();">
+              logout
+          </a>
+      </li>
+      
+      @endauth
     </ul>
   </div>
 </nav>
@@ -53,7 +66,9 @@
     </div>
 
     </div>
-
+<form id="logoutform" action="{{ route('logout') }}" method="POST" style="display: none;">
+            {{ csrf_field() }}
+</form>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
